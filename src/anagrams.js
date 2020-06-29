@@ -1,4 +1,4 @@
-const letterCount = arr => {
+export const letterCount = arr => {
   return arr.reduce((acc, x) => {
     const count = acc[x] || 0
     return { ...acc, [x]: count + 1 }

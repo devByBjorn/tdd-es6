@@ -1,5 +1,6 @@
 import { expect } from 'chai'
 import {
+  letterCount,
   formString,
   sortKeys,
   compareKeys,
@@ -7,6 +8,15 @@ import {
   compareObjValues,
   isAnagram,
 } from './anagrams'
+
+describe('letterCount functionality', () => {
+  it('should take an array and return a obejct with array items as keys and item occurences as value', () => {
+    const arr = ['blue', 'red', 'green', 'blue', 'green', 'blue']
+    const expected = { blue: 3, green: 2, red: 1 }
+    const actual = letterCount(arr)
+    expect(actual).to.deep.equal(expected)
+  })
+})
 
 describe('formString functionality', () => {
   it('should turn a string into an array, each char should be represented as an array item, no spaces should be represented', () => {
